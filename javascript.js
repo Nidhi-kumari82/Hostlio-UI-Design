@@ -1,51 +1,4 @@
-/* ================================
-   DOM READY (Always First)
-================================ */
-// document.addEventListener("DOMContentLoaded", () => {
-//   // Load components
-//   loadComponent("herosection", "./index.html")
-//     .then(initCarousel)
-//     .catch(() => {
-//       console.warn("Carousel component not loaded");
-//     });
 
-
-//   Search input (safe check)
-//   const searchInput = document.querySelector(".search");
-//   if (searchInput) {
-//     searchInput.addEventListener("input", () => {
-//       console.log("Searching:", searchInput.value);
-//     });
-//   }
-// });
-
-
-/* ==============const==================
-   COMPONENT LOADER
-================================ */
-function loadComponent(id, file) {
-  const el = document.getElementById(id);
-
-  if (!el) {
-    console.warn(`Element with id '${id}' not found`);
-    return Promise.reject("Container not found");
-  }
-
-  return fetch(file)
-    .then((res) => {
-      if (!res.ok) throw new Error("Failed to load component");
-      return res.text();
-    })
-    .then((html) => {
-      el.innerHTML = html;
-    })
-    .catch((err) => {
-      console.error("Load error:", err);
-      throw err;
-    });
-}
-
- loadComponent("Navbar", "./Navbar.html");
 
 
 
@@ -80,3 +33,59 @@ function initCarousel() {
 
   showImage(current);
 }
+const registerForm = document.getElementById("registerform");
+if(registerForm){
+registerForm.addEventListener("submit",function(e){
+  e.preventDefault()
+        var email = document.getElementById("email").value;
+       var password=document.getElementById("password").value;
+
+  //  var confirmpassword =document.getElementById("confirmpassword").value;
+  //    if (password !== confirmpassword) {
+  //     alert("Passwords do not match");
+  //     return;
+  //   }
+     if (localStorage.getItem(email)) {
+      alert("Email already registered. Try login.");
+      return;
+    }
+     var user = {
+      email:email,
+      password: password
+    };
+      localStorage.setItem(email, JSON.stringify(user));
+
+ 
+  alert("user Resister Successfully")
+  window.location.href='login.html'
+});
+}
+
+const loginForm = document.getElementById("loginform");
+
+if (loginForm) {
+  loginForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const email = document.getElementById("email").value.trim().toLowerCase();
+    const password = document.getElementById("password").value.trim();
+
+    const storedUser = localStorage.getItem(email);
+
+    if (!storedUser) {
+      alert("User not found");
+      return;
+    }
+
+    const user = JSON.parse(storedUser);
+
+    if (user.password === password) {
+      alert("Welcome back!");
+      window.location.href = "index.html";
+    } else {
+      alert("Invalid password");
+    }
+  });
+}
+
+
