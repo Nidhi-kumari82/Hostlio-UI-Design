@@ -5,438 +5,314 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+
 
     <title>Hostlio | Find Rooms, Flats & PGs</title>
   </head>
-  <body style="padding-top: 96px">
+  <body>
 
-<nav  id="Navbar" class="fixed top-0 left-0 w-full z-50  h-24 shadow-md  bg-white">
-    <div class=" mt-3  ml-6 ">
-    <div class="flex item-center justify-between mx-auto max-w-7xl h-16 ">
-        <div>
-          <h1 class="text-4xl font-bold pt-4">
-            Host<span class="text-blue-500 text-4xl font-bold">Lio</span>
-          </h1>
-        </div>
-       
-      <div class="flex w-[40%] shadow-lg border border-blue-500 pl-4 rounded-full  mx-auto  mt-3 mb-2">
-        <input
-         type="text" 
-         placeholder="'Find your accomodation"
-         class="outline-none border-none  w-full"
-        
-        />
-         <button class="bg-blue-500 text-white px-4 py-1 mt-1 mb-1 mr-3  rounded-3xl hover:bg-blue-700 shadow-lg shadow-gray-400 " id="search">
-        Search
-      </button>
-      </div>
+<nav id="Navbar">
+  <div class="navbar-container">
 
-     <div class=" flex items-center mx-auto max-w-5xl h-16 ">
-        <ul class="flex item-center gap-6 text-2xl font-bold  h-16 pt-4 ">
-            <a href="index.html" >
-            <li>
-                Home
-            </li>
-            </a>
-            <a href="ContactUs.html">
-             <li>
-            Contact Us
-            </li>
-            </a>
-            <a href="AboutUs.html">
-             <li>
-            About Us
-            </li>
-            </a>
-
-        </ul>
-       <div class="flex gap-8  ml-10 font-bold ">
-        <a href="login.html" >
-        <button class="bg-blue-500  p-2 px-4 py-3  rounded-2xl ">Login</button>
-        </a>
-        <a href="signup.html" >
-            <button class="bg-blue-500  p-2  px-4 py-3 rounded-2xl ">signUp</button>
-        </a>
-            </div>
-     </div>
-
+    <!-- Logo -->
+    <div class="logo">
+      <h1>Host<span class="blue-text">Lio</span></h1>
     </div>
+
+ 
+
+    <!-- Hamburger (MOBILE ONLY) -->
+    <div class="menu-toggle" id="menuToggle">
+      ☰
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-links" id="navLinks">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+            <li><a href="#properties">Properties </a></li>
+            
+            <li><a href="#services">Services </a></li>
+        <li><a href="#contactus">Contact</a></li>
+        <li><a href="AboutUs.html">About </a></li>
+      </ul>
+
+      <!-- Buttons -->
+      <div class="nav-buttons">
+        <a href="login.html"><button>Login</button></a>
+        <!-- <a href="signup.html"><button>Sign Up</button></a> -->
+      </div>
+    </div>
+    
+
+  </div>
 </nav>
+
+
 
 
 
     <!-- end navbar -->
 
-    <main class="pt-24">
-      <section id="herosection" class="relative w-full">
-        <div id="carousel" class="relative w-full mx-auto">
-          <!-- Images -->
-          <div class="rounded-lg">
-            <img
-              src="https://roomkhojlo.com/static/images/hero2.webp"
-              class="carousel-image w-full block"
-            />
-            <img
-              src="https://roomkhojlo.com/static/images/hero1.webp"
-              class="carousel-image w-full hidden"
-            />
-            <img
-              src="https://roomkhojlo.com/static/images/hero3.webp"
-              class="carousel-image w-full hidden"
-            />
-          </div>
+<main>
+  <section id="herosection">
+    <div class="hero-overlay">
 
-          <!-- PREV -->
-          <button
-            id="prev"
-            class="absolute top-1/2 left-4 -translate-y-1/2 bg-gray-700 text-white px-3 py-1 rounded-full hover:bg-gray-900 z-10"
-          >
-            &#10094;
-          </button>
+      <div class="hero-content">
 
-          <!-- NEXT -->
-          <button
-            id="next"
-            class="absolute top-1/2 right-2 -translate-y-1/2 bg-gray-700 text-white px-3 py-1 rounded-full hover:bg-gray-900 z-20"
-          >
-            &#10095;
-          </button>
-        </div>
-      </section>
-    </main>
+        <h1>
+          Let's Find Your Peace With
+          <span class="forthline">HostLio</span>
+        </h1>
 
-    <!-- location -->
-
-    <section class="grid grid-cols-4 mr-10 ml-10">
-      <div
-        class="w-[90%] h-36 bg-slate-100 m-6 mt-8 rounded-2xl overflow-hidden transition-transform duration-300 ease-in-out hover:scale-110 cursor-pointer"
-      >
-        <img
-          class="w-full h-full object-cover rounded-2xl"
-          src="https://roomkhojlo.com/static/images/cities/patna.webp"
-        />
-      </div>
-
-      <div
-        class="w-[90%] h-36 bg-slate-100 m-6 mt-8 rounded-2xl overflow-hidden transition-transform duration-300 ease-in-out hover:scale-110 cursor-pointer"
-      >
-        <img
-          class="w-full h-full object-cover rounded-2xl cursor-pointer"
-          src="https://roomkhojlo.com/static/images/cities/delhi.webp"
-        />
-      </div>
-
-      <div
-        class="w-[90%] h-36 bg-slate-100 m-6 mt-8 rounded-2xl overflow-hidden transition-transform duration-300 ease-in-out hover:scale-110 cursor-pointer"
-      >
-        <img
-          class="w-full h-full object-cover rounded-2xl cursor-pointer"
-          src="https://roomkhojlo.com/static/images/cities/kota.webp"
-        />
-      </div>
-      <div
-        class="w-[90%] h-36 bg-slate-100 m-6 mt-8 rounded-2xl overflow-hidden transition-transform duration-300 ease-in-out hover:scale-110 cursor-pointer"
-      >
-        <img
-          class="w-full h-full object-cover rounded-2xl cursor-pointer"
-          src="https://roomkhojlo.com/static/images/cities/varanasi.webp"
-        />
-      </div>
-      <div
-        class="w-[90%] h-36 bg-slate-100 m-6 mt-8 rounded-2xl overflow-hidden transition-transform duration-300 ease-in-out hover:scale-110 cursor-pointer"
-      >
-        <img
-          class="w-full h-full object-cover rounded-2xl cursor-pointer"
-          src="https://roomkhojlo.com/static/images/cities/prayagraj.webp"
-        />
-      </div>
-
-      <div
-        class="w-[90%] h-36 bg-slate-100 m-6 mt-8 rounded-2xl overflow-hidden transition-transform duration-300 ease-in-out hover:scale-110 cursor-pointer"
-      >
-        <img
-          class="w-full h-full object-cover rounded-2xl cursor-pointer"
-          src="https://roomkhojlo.com/static/images/cities/pune.webp"
-        />
-      </div>
-
-      <div
-        class="w-[90%] h-36 bg-slate-100 m-6 mt-8 rounded-2xl overflow-hidden transition-transform duration-300 ease-in-out hover:scale-110 cursor-pointer"
-      >
-        <img
-          class="w-full h-full object-cover rounded-2xl cursor-pointer"
-          src="https://roomkhojlo.com/static/images/cities/prayagraj.webp"
-        />
-      </div>
-
-      <div
-        class="w-[90%] h-36 bg-slate-100 m-6 mt-8 rounded-2xl overflow-hidden transition-transform duration-300 ease-in-out hover:scale-110 cursor-pointer"
-      >
-        <img
-          class="w-full h-full object-cover rounded-2xl cursor-pointer"
-          src="https://roomkhojlo.com/static/images/cities/prayagraj.webp"
-        />
-      </div>
-    </section>
-
-    <!-- fiters -->
-    <section class="flex justify-between mx-auto ml-15 gap-4">
-      <div
-        class="w-[7%] h-12 bg-gradient-to-r from-blue-500 to-green-500 text-white flex items-center justify-center font-bold rounded-2xl shadow-lg shadow-gray-950 cursor-pointer"
-      >
-        <img
-          src="https://img.icons8.com/?size=100&id=mkCMd1aaUHY5&format=png&color=228BE6"
-          width="5px"
-          height="5px"
-        />
-        Filters
-      </div>
-      <div
-        class="w-[7%] h-12 bg-gradient-to-r from-yellow-500 to-orange-500 text-white flex items-center justify-center font-bold rounded-2xl shadow-lg shadow-gray-950 cursor-pointer"
-      >
-        <img
-          src="https://img.icons8.com/?size=100&id=mkCMd1aaUHY5&format=png&color=228BE6"
-          width="5px"
-          height="5px"
-        />
-        Facility
-      </div>
-      <div
-        class="w-[13%] h-12 bg-gradient-to-r from-green-500 to bg-green-950 text-white flex items-center justify-center font-bold rounded-2xl shadow-lg shadow-gray-950 cursor-pointer"
-      >
-        <img
-          src="https://img.icons8.com/?size=100&id=mkCMd1aaUHY5&format=png&color=228BE6"
-          width="5px"
-          height="5px"
-        />
-        Annoucement
-      </div>
-      <div
-        class="w-[13%] h-12 bg-gradient-to-r from-blue-500 to-green-500 text-white flex items-center justify-center font-bold rounded-2xl shadow-lg shadow-gray-950 cursor-pointer"
-      >
-        <img
-          src="https://img.icons8.com/?size=100&id=mkCMd1aaUHY5&format=png&color=228BE6"
-          width="5px"
-          height="5px"
-        />
-        Declaration
-      </div>
-      <div
-        class="w-[13%] h-12 bg-gradient-to-r from-purple-500 to-pink-800 text-white flex items-center justify-center font-bold rounded-2xl shadow-lg shadow-gray-950 cursor-pointer"
-      >
-        <img
-          src="https://img.icons8.com/?size=100&id=mkCMd1aaUHY5&format=png&color=228BE6"
-          width="5px"
-          height="5px"
-        />
-        Carrier Guidance
-      </div>
-
-      <div
-        class="flex w-[35%] shadow-lg border border-blue-500 pl-4 rounded-full mx-auto"
-      >
-        <input
-          type="text"
-          placeholder="'Find your accomodation"
-          class="outline-none border-none w-full"
-        />
-        <button
-          class="bg-blue-500 text-white px-4 py-1 mt-1 mb-1 mr-3 rounded-3xl hover:bg-blue-700 shadow-lg shadow-gray-400 cursor-pointer"
-        >
-          Search
-        </button>
-      </div>
-    </section>
-
-    <!-- property details -->
-
-    <section
-      class="flex w-[1400px] h-auto p-3 mt-6 ml-14 mb-32 mr-8 shadow-lg shadow-gray-500"
-    >
-      <div class="w-full h-full rounded-lg mb-5 shadow-lg shadow-gray-400">
-        <img
-          class="w-full h-full object-cover rounded-3xl p-3"
-          src="https://roomkhojlo.com/media/building_photos/IMG_5168.webp"
-          alt="Building"
-        />
-      </div>
-
-      <div class="w-full pl-6 pr-6">
-        <h1 class="text-2xl font-bold mb-2">Hasan Boys Hostel</h1>
-        <p class="text-gray-500">
-          LINE BAZAR, PURNEA, PURNEA, NAKA CHOWK, HAHYAK THANA, KHAZANCHI HAAT,
-          NEAR HAMDARD DAWA KHANA, BIHAR
-        </p>
-        <span class="text-blue-500">Contact No. : 7979989496</span>
-        <h2 class="text-blue-500 font-bold">Status: Available</h2>
-        <div class="flex justify-between gap-1">
-          <h3 class="bg-blue-500 text-white rounded-2xl w-[65%] h-9 p-2 pl-4">
-            Single Bed,Double Bed,Triple Bed
-          </h3>
-          <h3 class="bg-blue-500 text-white rounded-2xl w-[50%] h-9 p-2 pl-4">
-            Rent: ₹6,000 - ₹7,500
-          </h3>
-        </div>
-        <h3>Male</h3>
-        <div class="grid grid-cols-3 gap-2 m-5">
-          <span
-            class="inline-block  h-8 border-0 rounded-2xl bg-blue-500 text-white p-1 pl-3 flex items-center justify-center"
-          >
-            Wi-Fi/Internet
-          </span>
-          <span
-            class="inline-block  h-8 border-0 rounded-2xl bg-blue-500 text-white p-1 pl-3 flex items-center justify-center"
-          >
-            Power Backup
-          </span>
-          <span
-            class="inline-block  h-8 border-0 rounded-2xl bg-blue-500 text-white p-1 pl-3 flex items-center justify-center"
-          >
-            24x7 Water supply
-          </span>
-          <span
-            class="inline-block  h-8 border-0 rounded-2xl bg-blue-500 text-white p-1 pl-3 flex items-center justify-center"
-          >
-            Wi-Fi/Internet
-          </span>
-          <span
-            class="inline-block  h-8 border-0 rounded-2xl bg-blue-500 text-white p-1 pl-3 flex items-center justify-center"
-          >
-            Wi-Fi/Internet
-          </span>
-          <span
-            class="inline-block  h-8 border-0 rounded-2xl bg-blue-500 text-white p-1 pl-3 flex items-center justify-center"
-          >
-            Wi-Fi/Internet
-          </span>
-          <span
-            class="inline-block  h-8 border-0 rounded-2xl bg-blue-500 text-white p-1 pl-3 flex items-center justify-center"
-          >
-            Wi-Fi/Internet
-          </span>
-          <span
-            class="inline-block h-8 border-0 rounded-2xl bg-blue-500 text-white p-1 pl-3 flex items-center justify-center"
-          >
-            Wi-Fi/Internet
-          </span>
-          <span
-            class="inline-block  h-8 border-0 rounded-2xl bg-blue-500 text-white p-1 pl-3 flex items-center justify-center"
-          >
-            Wi-Fi/Internet
-          </span>
-          <span
-            class="inline-block  h-8 border-0 rounded-2xl bg-blue-500 text-white p-1 pl-3 flex items-center justify-center"
-          >
-            Wi-Fi/Internet
-          </span>
+        <div class="search-box">
+          <input type="text" placeholder="Find your accommodation" />
+          <button>Search</button>
         </div>
 
-        <div class="flex gap-8 m-5">
-          <button class="bg-blue-500 p-3 rounded-2xl pl-6 pr-6 font-bold">
-            Booking
-          </button>
-          <button class="bg-gray-200 p-3 rounded-2xl pl-6 pr-6 font-bold">
-            Callback
-          </button>
-        </div>
       </div>
 
-      <div
-        class="w-full h-full overflow-hidden rounded-lg mb-5 shadow-lg shadow-gray-400"
-      >
-        <img
-          class="w-full h-full object-cover rounded-3xl p-3"
-          src="https://roomkhojlo.com/media/building_photos/IMG_5168.webp"
-          alt="Building"
-        />
+    </div>
+  </section>
+</main>
+
+ <div  id="properties" class="property-box" >
+  <h1 class="property-text">Properties feartures</h1>
+<div class="card-box">
+
+<div class="card">
+  <img
+    src="https://images.unsplash.com/photo-1568605114967-8130f3a36994"
+    alt="House"
+  />
+
+  <div class="card-content">
+    <h3>Luxury Hostel</h3>
+    <p>Comfortable stay with all modern facilities at an affordable price.</p>
+
+    <div class="card-footer">
+      <span class="price">₹5,000 / month</span>
+      <button>View Details</button>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <img
+    src="https://images.unsplash.com/photo-1568605114967-8130f3a36994"
+    alt="House"
+  />
+
+  <div class="card-content">
+    <h3>Luxury Hostel</h3>
+    <p>Comfortable stay with all modern facilities at an affordable price.</p>
+
+    <div class="card-footer">
+      <span class="price">₹5,000 / month</span>
+      <button>View Details</button>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <img
+    src="https://images.unsplash.com/photo-1568605114967-8130f3a36994"
+    alt="House"
+  />
+
+  <div class="card-content">
+    <h3>Luxury Hostel</h3>
+    <p>Comfortable stay with all modern facilities at an affordable price.</p>
+
+    <div class="card-footer">
+      <span class="price">₹5,000 / month</span>
+      <button>View Details</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+<!-- Services -->
+<div id="services" class="services-box">
+
+  <h1 class="services-title">Why Choose Us</h1>
+
+  <div class="services-container">
+
+    <div class="service-card">
+      <h2>Wide Coverage</h2>
+      <p>
+        Explore PGs and rooms across major cities with high-resolution images,
+        detailed amenities, and verified listings.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h2>Instant Filters</h2>
+      <p>
+        Use smart filters to refine your search by gender, budget, location,
+        and occupancy in just seconds.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h2>Map Integration</h2>
+      <p>
+        View PG and room listings on interactive maps powered by Leaflet.js
+        for accurate location insights.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+<!-- Contact us -->
+<div class="contact-box" id="contactus">
+  <h1 class="contact-text">Contact Us here</h1>
+
+  <div class="contact-inner-box">
+
+    <!-- FORM -->
+    <form id="contactusform" class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your Name" />
       </div>
-    </section>
 
-    <footer class="w-full h-auto p-4 pt-32 mt-10 bg-blue-400">
-      <div class="max-w-7xl flex justify-between p-10 ml-20 mr-10">
-        <div class="w-[30%]">
-          <h1 class="text-4xl font-bold pt-10 mt-10">
-            Host<span class="text-blue-900">Lio</span>
-          </h1>
-          <p class="mt-6 text-gray-600 text-sm">
-            Your trusted partner in finding the perfect home. We focus on
-            quality, transparency, and customer satisfaction.
-          </p>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Your Email" />
+      </div>
 
-          <div class="flex justify-evenly gap-1 p-6 mt-4">
-            <a href="https://www.facebook.com/" target="_blank">
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/2168/2168281.png"
-                width="45px"
-                height="45px"
-              />
-            </a>
-            <a href="https://x.com/" target="_blank">
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png"
-                width="45px"
-                height="45px"
-              />
-            </a>
-            <a href="https://www.linkedin.com/home" target="_blank">
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/1384/1384014.png"
-                width="45px"
-                height="45px"
-              />
-            </a>
-            <a href="https://telegram.org/" target="_blank">
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/2111/2111710.png"
-                width="45px"
-                height="45px"
-              />
-            </a>
-          </div>
-        </div>
+      <div class="form-group">
+        <label for="contact">Contact Number</label>
+        <input type="text" id="contact" placeholder="Enter Your Contact Number" />
+      </div>
 
-        <!-- ===== Quick Links ===== -->
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Write your message here..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+
+    <!-- CONTACT INFO -->
+    <div class="contact-info">
+      <div class="info-card">
+        <i class="fi fi-sr-marker"></i>
         <div>
-          <h2 class="text-lg font-bold mb-4 pt-10 mt-10">Quick Links</h2>
-          <ul class="space-y-4">
-            <li class="mb-3 hover:text-yellow-800">
-              <a href="index.html" class="">Home</a>
-            </li>
-            <li class="mb-3">
-              <a href="AboutUs.html" class="">About Us</a>
-            </li>
-            <li class="mb-3">
-              <a href="ContactUs.html" class="">Contact Us</a>
-            </li>
-            <li><a href="#" class="hover:text-blue-500">Login</a></li>
-          </ul>
+          <h3>Office</h3>
+          <p>Patna, BIT</p>
         </div>
-
-        <!-- ===== Services ===== -->
-        <div>
-          <h2 class="text-lg font-bold mb-4 pt-10 mt-10">Our Services</h2>
-          <ul class="space-y-2">
-            <li class="mb-3">PG & Hostel Search</li>
-            <li class="mb-3">Room & Flat Listings</li>
-            <li class="mb-3">Verified Properties</li>
-            <li class="mb-3">Student-Friendly Homes</li>
-          </ul>
-        </div>
-
-        <!-- ===== Contact Info ===== -->
-        <div>
-          <h2 class="text-lg font-bold mb-4 pt-10 mt-10">Contact</h2>
-          <p class="text-gray-700 text-sm mb-3">📍 Bihar, India</p>
-          <p class="text-gray-700 text-sm mb-3">📞 +91 79799 89496</p>
-          <p class="text-gray-700 text-sm mb-3">✉️ support@hostlio.com</p>
-        </div>
-
-        <!-- ================= BOTTOM BAR ================= -->
       </div>
-      <div class="border-t flex justify-center w-full py-4 text-sm mt-10">
-        <h1 class="text-blue-600">© 2025 Hostlio. All rights reserved.</h1>
+
+      <div class="info-card">
+        <i class="fi fi-sr-phone-call"></i>
+        <div>
+          <h3>Call</h3>
+          <p>+91 9812548949</p>
+        </div>
       </div>
-    </footer>
+
+      <div class="info-card">
+        <i class="fi fi-sr-circle-envelope"></i>
+        <div>
+          <h3>Email</h3>
+          <p>support@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="whatsapp-button">
+        <a href="https://wa.me/919508743218" target="_blank">
+          <img
+            src="https://images.icon-icons.com/4085/PNG/512/whatsapp_logo_icon_259368.png"
+            alt="WhatsApp"
+          />
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  
+
+  
+
+   <footer class="footer">
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <h1 class="logo">
+        Host<span>Lio</span>
+      </h1>
+      <p>
+        Your trusted partner in finding the perfect home. We focus on
+        quality, transparency, and customer satisfaction.
+      </p>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/128/2168/2168281.png" />
+        </a>
+        <a href="https://x.com/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png" />
+        </a>
+        <a href="https://www.linkedin.com/home" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/128/1384/1384014.png" />
+        </a>
+        <a href="https://telegram.org/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/128/2111/2111710.png" />
+        </a>
+      </div>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-section">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="ContactUs.html">Contact Us</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="footer-section">
+      <h2>Our Services</h2>
+      <ul>
+        <li>PG & Hostel Search</li>
+        <li>Room & Flat Listings</li>
+        <li>Verified Properties</li>
+        <li>Student-Friendly Homes</li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-section">
+      <h2>Contact</h2>
+      <p>📍 Bihar, India</p>
+      <p>📞 +91 79799 89496</p>
+      <p>✉️ support@hostlio.com</p>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    © 2025 Hostlio. All rights reserved.
+  </div>
+</footer>
+
 
     <script src="./javascript.js"></script>
   </body>

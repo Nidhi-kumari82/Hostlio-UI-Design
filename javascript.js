@@ -3,36 +3,14 @@
 
 
 
-function initCarousel() {
-  const images = document.querySelectorAll(".carousel-image");
-  const prev = document.getElementById("prev");
-  const next = document.getElementById("next");
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
 
-  if (!prev || !next || images.length === 0) {
-    console.warn("Carousel not found on this page");
-    return;
-  }
-
-  let current = 0;
-
-  function showImage(index) {
-    images.forEach((img, i) => {
-      img.classList.toggle("hidden", i !== index);
-    });
-  }
-
-  prev.addEventListener("click", () => {
-    current = (current - 1 + images.length) % images.length;
-    showImage(current);
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
   });
 
-  next.addEventListener("click", () => {
-    current = (current + 1) % images.length;
-    showImage(current);
-  });
 
-  showImage(current);
-}
 const registerForm = document.getElementById("registerform");
 if(registerForm){
 registerForm.addEventListener("submit",function(e){

@@ -9,33 +9,35 @@
   </head>
   <body>
    
- <div class="outer-body">
-<div class="box">
-   <form action="" id="loginform">
-    <h1 class="">Login</h1>
-    <div class="input-div">
-      <input type="email" placeholder="email" id="email" autocomplete="new-email" required
-      >
-    </div>
-    <div class="input-div">
-      <input type="password" placeholder="password" id="password" autocomplete="new-password" required
-      >
-    </div>
-    <div class="remeber-forgot">
-      <label><input type="checkbox">Remeber me</label>
-      <a href="#">Forget password</a>
-    </div>
-    <div class="login-submit">
+<div class="outer-body">
+  <div class="box">
+    <form action="" id="loginform" class="login-form">
+      <h1 class="box-h1">Login</h1>
+      
+      <div class="input-div">
+        <input type="email" placeholder="Email" id="email" autocomplete="new-email" required>
+      </div>
+      
+      <div class="input-div">
+        <input type="password" placeholder="Password" id="password" autocomplete="new-password" required>
+      </div>
+      
+      <div class="remeber-forgot">
+        <label><input type="checkbox"> Remember me</label>
+        <a href="#">Forget password</a>
+      </div>
+      
+      <div class="login-submit">
+        <button type="submit">Login</button>
+      </div>
+      
+      <div class="register-link">
+        <p>Do you have an account? <a href="signup.html">Register</a></p>
+      </div>
+    </form>
+  </div>
+</div>
 
-      <button type="submit">login</button>
-    </div>
-    <div class="register-link">
-      <p>Do you have an account?<a href="signup.html">Register</a></p>
-    </div>
-   </form>
-
- </div>
- </div>
     <script src="./javascript.js"></script>
   </body>
 </html>
